@@ -1,8 +1,6 @@
 import ENV from "./env";
-import {dbConnect} from "mongo-connexion";
+import {dbInit} from "mongo-registry";
 import startExpress from "express-blueforest";
 
-
-
-export default dbConnect(ENV)
+export default dbInit(ENV, [])
     .then(startExpress(ENV))

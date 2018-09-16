@@ -1,4 +1,4 @@
-import {col} from "mongo-connexion";
+import {col} from "mongo-registry"
 import ENV from "../env";
 
 const films = col(ENV.DB_COLLECTION);

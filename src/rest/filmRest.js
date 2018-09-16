@@ -1,5 +1,4 @@
 import {Router} from "express-blueforest";
-import {col} from "mongo-registry/dist";
 import {check} from 'express-validator/check';
 import {run} from "express-blueforest";
 import {deleteFilm, getFilm, getFilmByName, getFilms, saveFilm} from "../service/filmService";

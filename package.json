@@ -1,11 +1,11 @@
 {
   "name": "film",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "rimraf dist && babel src --out-dir dist",
+    "build": "rimraf dist && babel src --out-dir dist/js",
     "dev": "node --version && cross-env PORT=8089 nodemon src/index.js --exec babel-node"
   },
   "author": "",

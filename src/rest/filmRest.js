@@ -5,7 +5,7 @@ import {deleteFilm, getFilm, getFilmByName, getFilms, saveFilm} from "../service
 
 const router = Router();
 
-router.get('/api/films', run(getFilms));
+router.get('/api/film/all', run(getFilms));
 router.get('/api/film/:_id', check("_id"), run(getFilm));
 router.get('/api/filmbyname/:name', check("name"), run(getFilmByName));
 router.delete('/api/film/:_id', check("_id"), run(deleteFilm));

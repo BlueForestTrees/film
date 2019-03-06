@@ -1,5 +1,6 @@
 import path from "path";
 import {version, name} from './../package.json'
+const debug = require('debug')('api:film')
 
 const ENV = {
     NAME:name,
@@ -17,6 +18,6 @@ const ENV = {
     REST_PATH: process.env.REST_PATH || path.join(__dirname, "rest")
 };
 
-console.log({ENV});
+debug({ENV});
 
 export default ENV;

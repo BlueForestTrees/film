@@ -1,19 +1,20 @@
 {
   "name": "film",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "build": "rimraf dist && babel src --out-dir dist/js",
-    "dev": "node --version && cross-env PORT=8089 nodemon src/index.js --exec babel-node"
+    "dev": "node --version && cross-env PORT=8089 DEBUG=api:* nodemon src/index.js --exec babel-node"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express-blueforest": "1.0.3",
-    "express-validator": "5.3.0",
-    "mongo-registry": "1.0.13"
+    "debug": "4.1.1",
+    "express-blueforest": "1.1.5",
+    "express-validator": "5.3.1",
+    "mongo-registry": "1.0.21"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",

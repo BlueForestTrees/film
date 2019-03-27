@@ -7,4 +7,8 @@ export const saveFilm = ({film}) => films.update({_id: film._id}, film, {upsert:
 export const deleteFilm = ({_id}) => films.deleteOne({_id});
 export const getFilm = ({_id}) => films.findOne({_id});
 export const getFilmByName = ({name}) => films.findOne({"f.name": name});
+export const getFilmRandom = async () => {
+    const arr = await films.aggregate([ { $sample: { size: 1 } } ]).toArray()
+    return arr[0]
+}
 export const getFilms = () => films.find({}, {_id: 1, "f.name": 1}).toArray();

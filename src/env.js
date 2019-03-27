@@ -14,7 +14,7 @@ const ENV = {
     DB_PWD: process.env.DB_PWD || "masta",
     DB_COLLECTION: process.env.DB_COLLECTION || "filmCollection",
 
-    PORT: process.env.PORT || 8080,
+    PORT: process.env.PORT || 80,
 
     REST_PATH: process.env.REST_PATH || path.join(__dirname, "rest")
 };

@@ -9,7 +9,7 @@ export const getFilm = ({_id}) => films.findOne({_id})
 export const getFilmByName = ({name}) => films.findOne({"f.name": name})
 export const getFilmIntro = async () => {
     const arr = await films.aggregate([
-        {$match: {show: 1}},
+        {$match: {show: true}},
         {$sample: {size: 1}}
     ]).toArray()
     return arr[0]
